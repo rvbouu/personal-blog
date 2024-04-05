@@ -8,22 +8,24 @@ const blogName = document.querySelector('#blogName'); // only index.html
 console.log(toggle);
 // Dark Mode function
 // gets localStorage data and sets screen to last setting
-let darkMode = localStorage.getItem('darkMode');
+let darkMode = localStorage.getItem('darkMode') || 'light';
 let toggleDark = localStorage.getItem('toggleDark');
-body.classList.add('class',darkMode);
-header.classList.add('class',darkMode);
-footer.classList.add('class',darkMode);
+console.log(darkMode);
+
+body.classList.add(darkMode);
+header.classList.add(darkMode);
+footer.classList.add(darkMode);
 // applies class to all a tags
 for (var i=0; i < aTag.length; i++) {
-  aTag[i].classList.add("class", darkMode);
+  aTag[i].classList.add(darkMode);
 }
 // applies class to all span tags
 for (var i=0; i < span.length; i++) {
-  span[i].classList.add("class", darkMode);
+  span[i].classList.add(darkMode);
 }
 
 if( blogName ){
-  blogName.classList.add('class',darkMode); // only index.html
+  blogName.classList.add(darkMode); // only index.html
 }
 toggle.textContent = toggleDark;
 
@@ -45,7 +47,7 @@ toggle.addEventListener('click', function() {
     }
     blogName?.classList.remove('class','dark'); // only index.html
     toggle.textContent = '☀️';
-    localStorage.setItem('darkMode', '');
+    localStorage.setItem('darkMode', 'light');
     localStorage.setItem('toggleDark', '☀️');
   } else {
     body.classList.add('class','dark');

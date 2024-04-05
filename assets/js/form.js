@@ -1,7 +1,7 @@
-const form = $('.form');
-const username = $('input[id="username"]');
-const title = $('input[id="title"]');
-const content = $('textarea[id="content"]');
+const form = document.querySelector('.form');
+const username = document.querySelector('input[id="username"]')
+const title = document.querySelector('input[id="title"]');
+const content = document.querySelector('textarea[id="content"]');
 
 // gets JSON array from localStorage and turns it into a normal array
 let stringData = localStorage.getItem('Saved Blogs');
@@ -10,9 +10,9 @@ let blogPosts = JSON.parse(stringData) || [];
 function formSubmit() {
   // object to hold each blog's data
   let blogInfo = {
-    username: username.val(),
-    title: title.val(),
-    content: content.val()
+    username: username.value,
+    title: title.value,
+    content: content.value
   }
 
   // adds object to array
@@ -33,7 +33,7 @@ function missingField(event) {
   event.preventDefault();
 
   // checks to see if all fields are filled out
-  if (username.val() == '' || title.val() == '' || content.val() == '') {
+  if (username.value == '' || title.value == '' || content.value == '') {
     // if a field is missing, alert message pops up
     alert('All fields must be filled out.')
   } else {
@@ -43,4 +43,4 @@ function missingField(event) {
 }
 
 // calls missingField function on click
-form.on('submit', missingField);
+form.addEventListener('submit', missingField);
