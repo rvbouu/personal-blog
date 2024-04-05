@@ -46,6 +46,23 @@ h1{
   flex-grow: 1;
 }
 
+/* ---------- Dark mode ---------- */
+.switch{
+  font-size: 3rem;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+header.dark, footer.dark, a.dark, span.dark{
+  background-color: #403832;
+  color: #fff4ef;
+}
+
+.dark{
+  background-color: #4c4947;
+  color: #fff4ef;
+}
+
 /* ---------- Footer ---------- */
 footer{
   bottom: 0;
