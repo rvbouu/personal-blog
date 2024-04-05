@@ -1,4 +1,4 @@
-/* ---------- font and page styling applied to both HTMLs ---------- */
+/* ---------- universal font and page styling  ---------- */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -73,7 +73,12 @@ footer{
   align-items: flex-end;
   padding: 3px 10px;
   line-height: 1.5rem;
+  position: fixed;
 }
 .footer{
   font-weight: 600;
+}
+
+footer p{
+  flex-grow: .6;
 }

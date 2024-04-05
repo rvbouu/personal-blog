@@ -3,7 +3,8 @@ const header = $('header');
 const body = $('body');
 const footer = $('footer');
 const aTag = $('a');
-const span = $('span')
+const span = $('span');
+const h2 = $('h2');
 
 // Dark Mode function
 toggle.on('click', function darkMode(){
@@ -13,6 +14,7 @@ toggle.on('click', function darkMode(){
     footer.removeClass('dark');
     aTag.removeClass('dark');
     span.removeClass('dark');
+    h2.removeClass('dark');
     toggle.text('☀️');
   }else{
     body.addClass('dark');
@@ -20,6 +22,7 @@ toggle.on('click', function darkMode(){
     footer.addClass('dark');
     aTag.addClass('dark');
     span.addClass('dark');
+    h2.addClass('dark');
     toggle.text('🌒');
   }
 });

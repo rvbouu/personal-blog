@@ -1,0 +1,66 @@
+/* ---------- main page styling ---------- */
+main{
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+/* blog title with blurred heart image */
+h2{
+  font-size: 3rem;
+  margin: 0 115px;
+  padding: 0 115px;
+  background-image: url(../images/brown-heart.jpeg);
+  height:500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 50px #fff4ef inset;
+}
+
+/* ---------- Dark Mode ---------- */
+h2.dark{
+  background-image: url(../images/brown-heart-dark.jpeg);
+  box-shadow: 0 0 90px 90px #4c4947 inset;
+}
+
+/* ---------- form styling ---------- */
+aside, .form{
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width:50%;
+  align-items: center;
+  justify-content: center;;
+}
+
+.form{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 500px;
+}
+
+label{
+  padding-top: 30px;
+}
+
+input{
+  width: 100%;
+  margin: 5px 0;
+}
+
+/* makes content input box bigger */
+#content{
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+#submit{
+  width: 100%;
+  background-color: #d6bda9;
+
+}
