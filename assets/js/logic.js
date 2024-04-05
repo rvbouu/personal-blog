@@ -10,47 +10,54 @@ console.log(toggle);
 // gets localStorage data and sets screen to last setting
 let darkMode = localStorage.getItem('darkMode');
 let toggleDark = localStorage.getItem('toggleDark');
-body.setAttribute('class',darkMode);
-header.setAttribute('class',darkMode);
-footer.setAttribute('class',darkMode);
+body.classList.add('class',darkMode);
+header.classList.add('class',darkMode);
+footer.classList.add('class',darkMode);
 // applies class to all a tags
 for (var i=0; i < aTag.length; i++) {
-  aTag[i].setAttribute("class", darkMode);
+  aTag[i].classList.add("class", darkMode);
 }
 // applies class to all span tags
 for (var i=0; i < span.length; i++) {
-  span[i].setAttribute("class", darkMode);
+  span[i].classList.add("class", darkMode);
 }
-blogName.setAttribute('class',darkMode); // only index.html
+
+if( blogName ){
+  blogName.classList.add('class',darkMode); // only index.html
+}
 toggle.textContent = toggleDark;
+
+
+// span.classList.add(')
+
 
 toggle.addEventListener('click', function() {
   if (body.classList.contains('dark')) {
 
-    body.removeAttribute('class', 'dark');
-    header.removeAttribute('class','dark');
-    footer.removeAttribute('class','dark');
+    body.classList.remove('class', 'dark');
+    header.classList.remove('class','dark');
+    footer.classList.remove('class','dark');
     for (var i=0; i < aTag.length; i++) {
-      aTag[i].removeAttribute("class", 'dark');
+      aTag[i].classList.remove("class", 'dark');
     }
     for (var i=0; i < span.length; i++) {
-      span[i].removeAttribute("class", 'dark');
+      span[i].classList.remove("class", 'dark');
     }
-    blogName.removeAttribute('class','dark'); // only index.html
+    blogName?.classList.remove('class','dark'); // only index.html
     toggle.textContent = '☀️';
     localStorage.setItem('darkMode', '');
     localStorage.setItem('toggleDark', '☀️');
   } else {
-    body.setAttribute('class','dark');
-    header.setAttribute('class','dark');
-    footer.setAttribute('class','dark');
+    body.classList.add('class','dark');
+    header.classList.add('class','dark');
+    footer.classList.add('class','dark');
     for (var i=0; i < aTag.length; i++) {
-      aTag[i].setAttribute("class", 'dark');
+      aTag[i].classList.add("class", 'dark');
     }
     for (var i=0; i < span.length; i++) {
-      span[i].setAttribute("class", 'dark');
+      span[i].classList.add("class", 'dark');
     }
-    blogName.setAttribute('class','dark'); // only index.html
+    blogName?.classList.add('class','dark'); // only index.html
     toggle.textContent = '🌒';
     localStorage.setItem('darkMode', 'dark');
     localStorage.setItem('toggleDark', '🌒');
