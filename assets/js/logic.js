@@ -5,13 +5,12 @@ const footer = document.querySelector('footer');
 const aTag = document.querySelectorAll('a');
 const span = document.querySelectorAll('span');
 const blogName = document.querySelector('#blogName'); // only index.html
-console.log(toggle);
+const backBtn = document.querySelector('#back-btn'); // only blog.html
+
 // Dark Mode function
 // gets localStorage data and sets screen to last setting
 let darkMode = localStorage.getItem('darkMode') || 'light';
 let toggleDark = localStorage.getItem('toggleDark');
-console.log(darkMode);
-
 body.classList.add(darkMode);
 header.classList.add(darkMode);
 footer.classList.add(darkMode);
@@ -23,43 +22,46 @@ for (var i=0; i < aTag.length; i++) {
 for (var i=0; i < span.length; i++) {
   span[i].classList.add(darkMode);
 }
-
+// if element is found on page, add dark mode class
 if( blogName ){
   blogName.classList.add(darkMode); // only index.html
 }
+
+if( backBtn ){
+  backBtn.classList.add(darkMode); // only blog.html
+}
 toggle.textContent = toggleDark;
-
-
-// span.classList.add(')
-
 
 toggle.addEventListener('click', function() {
   if (body.classList.contains('dark')) {
-
-    body.classList.remove('class', 'dark');
-    header.classList.remove('class','dark');
-    footer.classList.remove('class','dark');
+    // changes from dark to light mode
+    body.classList.remove('dark');
+    header.classList.remove('dark');
+    footer.classList.remove('dark');
     for (var i=0; i < aTag.length; i++) {
-      aTag[i].classList.remove("class", 'dark');
+      aTag[i].classList.remove('dark');
     }
     for (var i=0; i < span.length; i++) {
-      span[i].classList.remove("class", 'dark');
+      span[i].classList.remove('dark');
     }
-    blogName?.classList.remove('class','dark'); // only index.html
+    blogName?.classList.remove('dark'); // only index.html
+    backBtn?.classList.remove('dark'); // only blog.html
     toggle.textContent = '☀️';
     localStorage.setItem('darkMode', 'light');
     localStorage.setItem('toggleDark', '☀️');
   } else {
-    body.classList.add('class','dark');
-    header.classList.add('class','dark');
-    footer.classList.add('class','dark');
+    // changes from light to dark mode
+    body.classList.add('dark');
+    header.classList.add('dark');
+    footer.classList.add('dark');
     for (var i=0; i < aTag.length; i++) {
-      aTag[i].classList.add("class", 'dark');
+      aTag[i].classList.add('dark');
     }
     for (var i=0; i < span.length; i++) {
-      span[i].classList.add("class", 'dark');
+      span[i].classList.add('dark');
     }
-    blogName?.classList.add('class','dark'); // only index.html
+    blogName?.classList.add('dark'); // only index.html
+    backBtn?.classList.add('dark'); // only blog.html
     toggle.textContent = '🌒';
     localStorage.setItem('darkMode', 'dark');
     localStorage.setItem('toggleDark', '🌒');

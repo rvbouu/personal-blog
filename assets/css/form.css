@@ -63,8 +63,8 @@ input, textarea{
   resize: none;
 }
 
+/* ---------- submit button styling ---------- */
 #submit{
   width: 100%;
   background-color: #d6bda9;
-
 }
