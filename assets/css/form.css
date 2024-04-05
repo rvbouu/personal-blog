@@ -6,7 +6,7 @@ main{
 }
 
 /* blog title with blurred heart image */
-h2{
+#blogName{
   font-size: 3rem;
   margin: 0 115px;
   padding: 0 115px;
@@ -22,7 +22,7 @@ h2{
 }
 
 /* ---------- Dark Mode ---------- */
-h2.dark{
+#blogName.dark{
   background-image: url(../images/brown-heart-dark.jpeg);
   box-shadow: 0 0 90px 90px #4c4947 inset;
 }
