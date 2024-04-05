@@ -5,12 +5,9 @@ const content = $('textarea[id="content"]');
 
 // gets JSON array from localStorage and turns it into a normal array
 let stringData = localStorage.getItem('Saved Blogs');
-let blogPosts = JSON.parse(stringData);
+let blogPosts = JSON.parse(stringData) || [];
 
-function formSubmit(event){
-  // prevents default behavior
-  event.preventDefault();
-
+function formSubmit() {
   // object to hold each blog's data
   let blogInfo = {
     username: username.val(),
@@ -20,29 +17,30 @@ function formSubmit(event){
 
   // adds object to array
   blogPosts.push(blogInfo);
-  
+
   // turns array into JSON array
   const savedBlogs = JSON.stringify(blogPosts);
 
   // saves JSON array to localStorage
   localStorage.setItem('Saved Blogs', savedBlogs);
 
-  // clears input fields
-  // $('input[type="text"]').val('');
-  // $('textarea[type="text"]').val('');
+  // redirects from main page to blog page
+  document.location.href = './blog.html';
 }
 
-function newPage(){
-  document.location.href = '/Users/rvbou/Documents/bootcamp/homework/homework4/blog.html';
-}
+function missingField(event) {
+  // prevents default behavior
+  event.preventDefault();
 
-function missingField(){
-  if(username.val() == '' || title.val() == '' || content.val() == ''){
+  // checks to see if all fields are filled out
+  if (username.val() == '' || title.val() == '' || content.val() == '') {
+    // if a field is missing, alert message pops up
     alert('All fields must be filled out.')
-  }else{
-      formSubmit();
-      newPage();
-    }
+  } else {
+    // if all fields are filled, call formSubmit function
+    formSubmit();
   }
+}
 
+// calls missingField function on click
 form.on('submit', missingField);
