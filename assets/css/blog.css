@@ -20,7 +20,7 @@ body.blog{
 main.blog{
   display: flex;
   flex-direction: row;
-  margin: 15px;
+  /* margin: 15px; */
   flex-wrap: wrap;
   padding-bottom: 5rem;
 }
@@ -34,20 +34,20 @@ main.blog{
   margin: 15px auto;
   padding: 5px;
   height: 150px;
-  width: 50%;
-  flex: 0 0 800px;
+  flex: 0 1 700px;
 }
 
 .posts h3{
-  font-size: 2rem;
+  font-size: 1.75rem;
   border-bottom: 2px dotted;
   width: 100%;
+  padding-bottom: 5px;
 }
 
 .posts p{
   font-size: 1rem;
   flex-grow: 1;
-  padding: 5px;
+  padding: 8px 5px;
 }
 
 p.posted-by{
