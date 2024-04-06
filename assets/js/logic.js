@@ -15,11 +15,11 @@ body.classList.add(darkMode);
 header.classList.add(darkMode);
 footer.classList.add(darkMode);
 // applies class to all a tags
-for (var i=0; i < aTag.length; i++) {
+for (let i=0; i < aTag.length; i++) {
   aTag[i].classList.add(darkMode);
 }
 // applies class to all span tags
-for (var i=0; i < span.length; i++) {
+for (let i=0; i < span.length; i++) {
   span[i].classList.add(darkMode);
 }
 // if element is found on page, add dark mode class
@@ -38,10 +38,10 @@ toggle.addEventListener('click', function() {
     body.classList.remove('dark');
     header.classList.remove('dark');
     footer.classList.remove('dark');
-    for (var i=0; i < aTag.length; i++) {
+    for (let i=0; i < aTag.length; i++) {
       aTag[i].classList.remove('dark');
     }
-    for (var i=0; i < span.length; i++) {
+    for (let i=0; i < span.length; i++) {
       span[i].classList.remove('dark');
     }
     blogName?.classList.remove('dark'); // only index.html
@@ -54,10 +54,10 @@ toggle.addEventListener('click', function() {
     body.classList.add('dark');
     header.classList.add('dark');
     footer.classList.add('dark');
-    for (var i=0; i < aTag.length; i++) {
+    for (let i=0; i < aTag.length; i++) {
       aTag[i].classList.add('dark');
     }
-    for (var i=0; i < span.length; i++) {
+    for (let i=0; i < span.length; i++) {
       span[i].classList.add('dark');
     }
     blogName?.classList.add('dark'); // only index.html

@@ -1,5 +1,8 @@
 /* ---------- blog page styling ---------- */
-
+body.blog{
+  position: relative;
+  min-height: 100vh;
+}
 /* ---------- back button styling ---------- */
 #back-btn{
   margin: 0 10px;
@@ -11,4 +14,51 @@
 #back-btn.dark{
   background-color: #fff4ef;
   color: #4c4947;
+}
+
+/* ---------- blog posts styling ---------- */
+main.blog{
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+
+.posts{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 2px solid;
+  margin: 15px auto;
+  padding: 5px;
+  height: 150px;
+  width: 50%;
+  flex: 0 0 800px;
+}
+
+.posts h3{
+  font-size: 2rem;
+  border-bottom: 2px dotted;
+  width: 100%;
+}
+
+.posts p{
+  font-size: 1rem;
+  flex-grow: 1;
+  padding: 5px;
+}
+
+p.posted-by{
+  font-size: 0.8rem;
+  flex-grow: 0;
+  padding: 0;
+  font-style: italic;
+  opacity: 60%;
+
+}
+
+footer.blog{
+  position: absolute;
 }
