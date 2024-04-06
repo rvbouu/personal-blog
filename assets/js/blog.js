@@ -22,7 +22,7 @@ function createBlogPosts() {
   }
 }
 
-back.addEventListener('click', function(){
+back.addEventListener('click', function () {
   document.location.href = './index.html';
 })
 
