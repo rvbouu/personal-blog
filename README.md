@@ -30,4 +30,4 @@ the user will be redirected back to the home page. If the user had switched to d
 
 ## Deployed Application
 
-[Click here]() to view the deployed version.
+[Click here](https://rvbouu.github.io/personal-blog/) to view the deployed version.
