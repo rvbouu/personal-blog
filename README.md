@@ -24,6 +24,9 @@ When the page is switch to dark mode, the "sun" emoji will change to a "moon" em
 the user will be redirected back to the home page. If the user had switched to dark mode on the blog post page, the settings will be kept when they switch back to the homepage and vice versa. In the footer of both pages, the user will find a link to the developer's portfolio and a link to the blog post page so they are able to access it without having to always submit a post.
 ![Screenshot of homepage in dark mode with footer links highlighted](./assets/images/screenshot6.jpg)
 
+## Authors and acknowledgment
+Thank you to my instructor Gary and TA Katy for assisting with switching my jQuery codes to vanilla JavaScript!
+
 ## Screenshot
 
 ![Video of webpage in action](./assets/images/personal-blog.gif)
