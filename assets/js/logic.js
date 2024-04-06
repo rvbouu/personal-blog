@@ -8,7 +8,7 @@ const blogName = document.querySelector('#blogName'); // only index.html
 const backBtn = document.querySelector('#back-btn'); // only blog.html
 
 // Dark Mode function
-let darkMode = localStorage.setItem('darkMode','light')
+let darkMode = localStorage.setItem('darkMode','light');
 let toggleDark = localStorage.setItem('toggleDark','☀️');
 // gets localStorage data and sets screen to last setting
 darkMode = localStorage.getItem('darkMode') || 'light'; // if key isn't found in localStorage, sets darkMode to 'light'
