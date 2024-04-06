@@ -1,4 +1,4 @@
-const toggle = document.querySelector('.switch');
+const toggle = document.getElementById('switch');
 const header = document.querySelector('header');
 const body = document.querySelector('body');
 const footer = document.querySelector('footer');
@@ -7,9 +7,16 @@ const span = document.querySelectorAll('span');
 const blogName = document.querySelector('#blogName'); // only index.html
 const backBtn = document.querySelector('#back-btn'); // only blog.html
 
+// let toggleDark = localStorage.setItem('toggleDark',toggle.textContent);
+
+
+
+
+
+
 // Dark Mode function
-let darkMode = localStorage.setItem('darkMode','light');
-let toggleDark = localStorage.setItem('toggleDark','☀️');
+
+
 // gets localStorage data and sets screen to last setting
 darkMode = localStorage.getItem('darkMode') || 'light'; // if key isn't found in localStorage, sets darkMode to 'light'
 toggleDark = localStorage.getItem('toggleDark') || '☀️';
