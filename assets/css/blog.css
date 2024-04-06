@@ -9,6 +9,9 @@ body.blog{
   padding: 5px;
   background-color: #4c4947;
   color: #fff4ef;
+  width: 100px;
+  height: 50px;
+  text-wrap: nowrap;
 }
 
 #back-btn.dark{

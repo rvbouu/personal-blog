@@ -13,6 +13,7 @@ header, main.index, footer{
 /* ---------- h tag styling ---------- */
 h1, h2, h3, h4, h5, h6{
   font-family: Garamond, serif;
+  text-wrap: nowrap;
 }
 
 /* ---------- body tag font and styling ---------- */

@@ -16,7 +16,6 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  text-wrap: nowrap;
   border-radius: 50%;
   box-shadow: 0 0 50px 50px #fff4ef inset;
 }
@@ -54,6 +53,7 @@ input, textarea{
   font-size: 1rem;
   line-height: 1.5rem;
   padding: 3px;
+  min-width: 100px;
 }
 
 /* makes content input box bigger */
@@ -67,4 +67,5 @@ input, textarea{
 #submit{
   width: 100%;
   background-color: #d6bda9;
+  min-width: 100px;
 }
