@@ -9,7 +9,7 @@ const backBtn = document.querySelector('#back-btn'); // only blog.html
 
 // Dark Mode function
 // gets localStorage data and sets screen to last setting
-let darkMode = localStorage.getItem('darkMode') || 'light';
+let darkMode = localStorage.getItem('darkMode') || 'light'; // if key isn't found in localStorage, sets darkMode to 'light'
 let toggleDark = localStorage.getItem('toggleDark');
 body.classList.add(darkMode);
 header.classList.add(darkMode);
@@ -32,6 +32,7 @@ if( backBtn ){
 }
 toggle.textContent = toggleDark;
 
+// when emoji is clicked on page, changes theme accordingly
 toggle.addEventListener('click', function() {
   if (body.classList.contains('dark')) {
     // changes from dark to light mode

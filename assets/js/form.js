@@ -5,8 +5,9 @@ const content = document.querySelector('textarea[id="content"]');
 
 // gets JSON array from localStorage and turns it into a normal array
 let stringData = localStorage.getItem('Saved Blogs');
-let blogPosts = JSON.parse(stringData) || [];
+let blogPosts = JSON.parse(stringData) || []; // if data isn't found in localStorage, sets blogPosts to an empty array
 
+// function for when submit button
 function formSubmit() {
   // object to hold each blog's data
   let blogInfo = {
@@ -28,6 +29,7 @@ function formSubmit() {
   document.location.href = './blog.html';
 }
 
+// function to detect if any fields are not filled out
 function missingField(event) {
   // prevents default behavior
   event.preventDefault();

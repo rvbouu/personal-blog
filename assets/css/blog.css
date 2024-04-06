@@ -1,4 +1,5 @@
 /* ---------- blog page styling ---------- */
+/* keeps footer at bottom of page without being fixed */
 body.blog {
   position: relative;
   min-height: 100vh;
@@ -15,16 +16,17 @@ body.blog {
   text-wrap: nowrap;
 }
 
+/* ---------- back button Dark Mode ---------- */
 #back-btn.dark {
   background-color: #fff4ef;
   color: #4c4947;
 }
 
 /* ---------- blog posts styling ---------- */
+/* creates rows and columns of blog posts */
 main.blog {
   display: flex;
   flex-direction: row;
-  /* margin: 15px; */
   flex-wrap: wrap;
   padding-bottom: 5rem;
 }
@@ -63,6 +65,8 @@ p.posted-by {
 
 }
 
+/* ---------- Footer ---------- */
+/* keeps footer at bottom of page but not fixed */
 footer.blog {
   position: absolute;
 }

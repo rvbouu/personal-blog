@@ -92,6 +92,7 @@ footer {
   font-weight: 600;
 }
 
+/* sets 'Made by Vanessa Bou' into center of page */
 footer p {
   flex-grow: .6;
 }

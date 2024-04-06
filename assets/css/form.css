@@ -5,6 +5,7 @@ main {
   margin: 10px;
 }
 
+/* ---------- Left Side of Page ---------- */
 /* blog title with blurred heart image */
 #blogName {
   font-size: 3rem;
@@ -20,13 +21,13 @@ main {
   box-shadow: 0 0 50px 50px #fff4ef inset;
 }
 
-/* ---------- Dark Mode ---------- */
+/*  blurred heart Dark Mode  */
 #blogName.dark {
   background-image: url(../images/brown-heart-dark.jpeg);
   box-shadow: 0 0 90px 90px #4c4947 inset;
 }
 
-/* ---------- form styling ---------- */
+/* ---------- Form/Right Side of Page ---------- */
 aside,
 .form {
   display: flex;
@@ -66,7 +67,7 @@ textarea {
   resize: none;
 }
 
-/* ---------- submit button styling ---------- */
+/* submit button styling */
 #submit {
   width: 100%;
   background-color: #d6bda9;
